@@ -1,0 +1,24 @@
+@import './variables';
+@import './layout';
+@import './navbar-bottom';
+@import './index-site';
+@import './404';
+@import './sidebar';
+
+@import url('https://fonts.googleapis.com/css?family=Kanit');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Kanit';
+    font-weight: lighter;
+    color: $darker;
+    a {
+        text-decoration: none;
+    }
+}
+
+body {
+    scroll-behavior: smooth;
+}

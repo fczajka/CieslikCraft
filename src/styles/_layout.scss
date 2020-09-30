@@ -1,0 +1,71 @@
+@import './header';
+@import './navbar-bottom';
+
+.footer {
+    min-height: 10vh;
+    background: $light;
+    display: flex;
+    .text-ending {
+        @include basicFlex(center);
+        width: 70%;
+        font-size: 32px;
+    }
+    .contact {
+        width: 30%;
+        @include basicFlex(center);
+        flex-direction: column;
+        font-size: 22px;
+    }
+}
+
+@media screen and (min-width: 2560px) {
+    .footer {
+        .text-ending {
+            font-size: 64px;
+        }
+        .contact {
+            font-size: 32px;
+        }
+    }  
+}
+
+@media screen and (max-width: 1200px) {
+    .footer {
+        .text-ending {
+            font-size: 20px;
+        }
+        .contact {
+            font-size: 18px;
+        }
+    } 
+}
+
+@media screen and (max-width: 992.1px) {
+    .footer {
+        flex-direction: column;
+        margin-bottom: 10vh;
+        align-items: center;
+        justify-content: space-around;
+        .text-ending {
+            width: 100%;
+            font-size: 22px;
+        }
+        .contact {
+            width: 100%;
+            font-size: 18px;
+        }
+    } 
+}
+
+@media screen and (max-width: 575.98px) {
+    .footer {
+        .text-ending {
+            padding: 4px 0;
+            font-size: 12px;
+        }
+        .contact {
+            padding: 4px 0;
+            font-size: 12px;
+        }
+    }
+}

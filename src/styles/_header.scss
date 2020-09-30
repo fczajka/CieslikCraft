@@ -1,0 +1,135 @@
+.header {
+    position: fixed;
+    top: 0;
+    height: 10vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    background-color: $light;
+    z-index: 1;
+    .name {
+        position: fixed;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        padding: 8px;
+        .name-picture {
+            width: 305px;
+            height: auto;
+        }
+    }
+    .navbar {
+        position: fixed;
+        right: 0;
+        width: 30%;
+        .nav {
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            list-style: none;
+            .nav-links {
+                width: 36px;
+                height: 36px;
+            }
+        }
+    }
+    .sidebar-button {
+        width: 10%;
+        z-index: 2;
+        .hamburger {
+            position: relative;
+            width: 44px;
+            left: 25px;
+            cursor: pointer;
+            .line {
+                width: 36px;
+                height: 5px;
+                margin: 4px;
+                background: $darker;
+            }
+        }
+    }
+}
+
+.overlay {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    background: black;
+    opacity: 0.7;
+    top: 0;
+    z-index: 2;
+    display: none;
+}
+
+.active {
+    display: block;
+}
+
+@media screen and (min-width: 2560px) {
+    .header {
+        min-height: 125px;
+        .name {
+            .name-picture {
+                width: 550px;
+            }
+        }
+        .navbar {
+            .nav {
+                .nav-links {
+                    width: 64px;
+                    height: 64px;
+                }
+            }
+        }
+        .sidebar-button {
+            .hamburger {
+                .line {
+                    width: 50px;
+                    height: 7px;
+                    margin: 6px;
+                }
+            }
+        }
+    }  
+}
+
+@media screen and (max-width: 992px) {
+    .header {
+        .navbar {
+            display: none;
+        }
+        .sidebar-button {
+            width: 21%;
+            .hamburger {
+                left: 20px;
+                .line {
+                    width: 28px;
+                    height: 4px;
+                    margin: 3px;
+                }
+            }
+        }
+    }  
+}
+
+@media screen and (max-width: 575.98px) {
+    .header {
+
+        .name {
+            .name-picture {
+                width: 250px;
+            }
+        }
+    } 
+}
+
+@media screen and (max-width: 400.98px) {
+    .header {
+        .name {
+            .name-picture {
+                width: 175px;
+            }
+        }
+    } 
+}

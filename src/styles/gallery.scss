@@ -1,0 +1,138 @@
+@import './variables';
+
+@mixin flip-box {
+    width: 100%;      
+    perspective: 1000px;
+    padding: 8px;
+    .flip-box-inner {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        transition: transform 0.8s;
+        transform-style: preserve-3d;          
+        .flip-box-front, .flip-box-back {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            backface-visibility: hidden;
+            .image {
+                width: 100%;
+                height: 100%;
+                }
+            }
+        .flip-box-back {
+          transform: rotateY(180deg);
+        }
+    }    
+}
+
+.boat-name-gallery {
+    text-align: center;
+    margin: 72px;
+    font-size: 80px;
+}
+
+.boat-name-gallery:nth-child(1) {
+    margin-top: 16vh;
+  }
+
+.images {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    .column {
+        max-width: 25%;
+        flex: 25%;
+        .flip-box-1 {
+            height: 400px;
+            @include flip-box();
+        }  
+        .flip-box-1:hover {
+            .flip-box-inner {
+              transform: rotateY(180deg);                  
+            }
+        }
+        .flip-box-2 {
+            height: 200px;
+            @include flip-box();
+        }  
+        .flip-box-2:hover {
+            .flip-box-inner {
+              transform: rotateY(180deg);                  
+            }
+        }
+        .flip-box-3 {
+            height: 600px;
+            @include flip-box();
+        }  
+        .flip-box-3:hover {
+            .flip-box-inner {
+              transform: rotateY(180deg);                  
+            }
+        }
+    }
+}
+
+
+@media screen and (min-width: 2560px) {
+    .boat-name-gallery {
+        margin: 96px;
+        font-size: 128px;
+    }
+    .images {
+        .column {
+            .flip-box-1 {
+                height: 800px;                
+            }
+            .flip-box-2 {
+                height: 400px;
+            }
+            .flip-box-3 {
+                height: 1200px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .boat-name-gallery {
+        margin: 48px;
+        font-size: 64px;
+    }
+    .images {
+        .column {
+            max-width: 50%;
+            flex: 50%;
+        }
+    }
+}
+
+@media screen and (max-width: 767.98px) {
+    .boat-name-gallery {
+        margin: 32px;
+        font-size: 40px;
+    }
+
+    .images {
+        .column {
+            max-width: 100%;
+            flex: 100%;
+            .flip-box-1 {
+                height: 350px;                
+            }
+            .flip-box-2 {
+                height: 175px;
+            }
+            .flip-box-3 {
+                height: 525px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 575.98px) {
+    .boat-name-gallery {
+        margin: 16px;
+        font-size: 28px;
+    }
+}
