@@ -6,7 +6,7 @@ import "../styles/index.css"
 
 const NotFoundPage = () => (
   <div className="landing-404">
-    <SEO title="404: Not found" />
+    <SEO />
     <div className="not-found">
       <p className="error">ERROR 404</p>
       <p className="page-not-found">Page not found</p>

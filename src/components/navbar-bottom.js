@@ -6,28 +6,28 @@ import Img from "gatsby-image"
 const NavbarBottom = () => {
   const data = useStaticQuery(graphql`
     query {
-      facebook: file(relativePath: { eq: "facebook.png" }) {
+      facebook: file(relativePath: { eq: "facebook.webp" }) {
         childImageSharp {
           fixed(width: 36, height: 36) {
             ...GatsbyImageSharpFixed
           }
         }
       }
-      youtube: file(relativePath: { eq: "youtube.png" }) {
+      youtube: file(relativePath: { eq: "youtube.webp" }) {
         childImageSharp {
           fixed(width: 36, height: 36) {
             ...GatsbyImageSharpFixed
           }
         }
       }
-      instagram: file(relativePath: { eq: "instagram.png" }) {
+      instagram: file(relativePath: { eq: "instagram.webp" }) {
         childImageSharp {
           fixed(width: 36, height: 36) {
             ...GatsbyImageSharpFixed
           }
         }
       }
-      mail: file(relativePath: { eq: "mail.png" }) {
+      mail: file(relativePath: { eq: "mail.webp" }) {
         childImageSharp {
           fixed(width: 36, height: 36) {
             ...GatsbyImageSharpFixed
@@ -39,10 +39,10 @@ const NavbarBottom = () => {
   return (
   <nav className="navbar-bottom">
       <ul className="navbar-list">
-        <Link to="https://www.facebook.com/cieslikcraft/" target="_blank"><li className="navbar-links"><Img fixed={data.facebook.childImageSharp.fixed} alt="CieslikCraft - Facebook" /></li></Link>
-        <Link to="https://www.youtube.com/user/MaestroWojciech/featured" target="_blank"><li className="navbar-links"><Img fixed={data.youtube.childImageSharp.fixed} alt="CieslikCraft - Youtube" /></li></Link>
-        <Link to="https://www.instagram.com/cieslikcraft/" target="_blank"><li className="navbar-links"><Img fixed={data.instagram.childImageSharp.fixed} alt="CieslikCraft - Instagram" /></li></Link>
-        <Link to="mailto:cieslikcraft.pl"><li className="navbar-links"><Img fixed={data.mail.childImageSharp.fixed} alt="CieslikCraft - Mail" /></li></Link>
+        <li className="navbar-links"><a href="https://www.facebook.com/cieslikcraft/" target="https://www.facebook.com/cieslikcraft/"><Img fixed={data.facebook.childImageSharp.fixed} alt="CieslikCraft - Facebook" /></a></li>
+        <li className="navbar-links"><a href="https://www.youtube.com/user/MaestroWojciech/featured" target="https://www.youtube.com/user/MaestroWojciech/featured"><Img fixed={data.youtube.childImageSharp.fixed} alt="CieslikCraft - Youtube" /></a></li>
+        <li className="navbar-links"><a href="https://www.instagram.com/cieslikcraft/" target="https://www.instagram.com/cieslikcraft/"><Img fixed={data.instagram.childImageSharp.fixed} alt="CieslikCraft - Instagram" /></a></li>
+        <li className="navbar-links"><a href="mailto:cieslikcraft@gmail.com"><Img fixed={data.mail.childImageSharp.fixed} alt="CieslikCraft - Mail" /></a></li>
       </ul>
   </nav>
 )

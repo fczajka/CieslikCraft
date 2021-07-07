@@ -144,10 +144,10 @@
 }
 
 .first-parallax {
-    background-image: url('../images/parallax-1.jpg');
+    background-image: url('../images/parallax-1.webp');
 }
 .second-parallax {
-    background-image: url('../images/parallax-2.jpg');
+    background-image: url('../images/parallax-2.webp');
 }
 
 .boats-section {
@@ -179,16 +179,16 @@
                     background-position: center;
                 }
                 .boat-1 {
-                    background-image: url('../images/boat-no-color-1.png');
+                    background-image: url('../images/boat-no-color-1.webp');
                 }
                 .boat-2 {
-                    background-image: url('../images/boat-no-color-2.png');
+                    background-image: url('../images/boat-no-color-2.webp');
                 }
                 .boat-1:hover {
-                    background-image: url('../images/boat-color-1.png');
+                    background-image: url('../images/boat-color-1.webp');
                 }
                 .boat-2:hover {
-                    background-image: url('../images/boat-color-2.png');
+                    background-image: url('../images/boat-color-2.webp');
                 }
             }
             .boats-information {
@@ -213,7 +213,7 @@
     .gallery-block {
         width: 100%;
         height: 35vh;
-        background-image: url('../images/gallery.png');
+        background-image: url('../images/gallery.webp');
         background-repeat: no-repeat;
         background-position: center;
         background-size: cover;
@@ -231,7 +231,7 @@
     .article-block {
         width: 33%;
         height: 35vh;
-        background-image: url('../images/article.jpeg');
+        background-image: url('../images/article.webp');
         background-repeat: no-repeat;
         background-position: center;
         background-size: cover;

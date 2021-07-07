@@ -8,35 +8,35 @@ import Sidebar from "../components/sidebar"
 const Header = () => {
   const data = useStaticQuery(graphql`
     query {
-      logo: file(relativePath: { eq: "cieslikcraft-logo.png" }) {
+      logo: file(relativePath: { eq: "cieslikcraft-logo.webp" }) {
         childImageSharp {
           fluid(maxWidth: 1000, quality: 100) {
             ...GatsbyImageSharpFluid_noBase64
           }
         }
       }
-      facebook: file(relativePath: { eq: "facebook.png" }) {
+      facebook: file(relativePath: { eq: "facebook.webp" }) {
         childImageSharp {
           fluid(maxWidth: 1000, quality: 100) {
             ...GatsbyImageSharpFluid
           }
         }
       }
-      youtube: file(relativePath: { eq: "youtube.png" }) {
+      youtube: file(relativePath: { eq: "youtube.webp" }) {
         childImageSharp {
           fluid(maxWidth: 1000, quality: 100) {
             ...GatsbyImageSharpFluid
           }
         }
       }
-      instagram: file(relativePath: { eq: "instagram.png" }) {
+      instagram: file(relativePath: { eq: "instagram.webp" }) {
         childImageSharp {
           fluid(maxWidth: 1000, quality: 100) {
             ...GatsbyImageSharpFluid
           }
         }
       }
-      mail: file(relativePath: { eq: "mail.png" }) {
+      mail: file(relativePath: { eq: "mail.webp" }) {
         childImageSharp {
           fluid(maxWidth: 1000, quality: 100) {
             ...GatsbyImageSharpFluid
@@ -58,7 +58,7 @@ const Header = () => {
 
     render() {
       return (
-        <div className="hamburger" role="button" onClick={this.open} tabIndex={0}>
+        <div className="hamburger" role="button" aria-label="opensMenu" onClick={this.open} tabIndex={0}>
           <div className="line"></div>
           <div className="line"></div>
           <div className="line"></div>
@@ -91,7 +91,7 @@ const Header = () => {
     else {
       sidebar.style.left = "-250px";
     }
-    overlay.classList.remove("active");
+    setTimeout(() => { overlay.classList.remove("active"); }, 400);
 
   }
 

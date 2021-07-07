@@ -9,7 +9,7 @@ import "../styles/gallery.css"
 const Gallery = () => {
   return(
     <Layout>
-      <SEO title="Gallery" />
+      <SEO />
       <DolceVita />
       <DiscoVolante />
     </Layout>

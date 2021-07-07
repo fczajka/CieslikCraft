@@ -62,7 +62,7 @@
 .header .sidebar-button .hamburger {
   position: relative;
   width: 44px;
-  left: 25px;
+  left: 26px;
   cursor: pointer;
 }
 
@@ -73,36 +73,16 @@
   background: #212121;
 }
 
-.overlay {
-  position: fixed;
-  width: 100vw;
-  height: 100vh;
-  background: black;
-  opacity: 0.7;
-  top: 0;
-  z-index: 2;
-  display: none;
-}
-
-.active {
-  display: block;
-}
-
 @media screen and (min-width: 2560px) {
   .header {
     min-height: 125px;
   }
   .header .name .name-picture {
-    width: 550px;
+    width: 450px;
   }
   .header .navbar .nav .nav-links {
-    width: 64px;
-    height: 64px;
-  }
-  .header .sidebar-button .hamburger .line {
-    width: 50px;
-    height: 7px;
-    margin: 6px;
+    width: 48px;
+    height: 48px;
   }
 }
 
@@ -211,12 +191,27 @@
   font-size: 22px;
 }
 
+.overlay {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  background: black;
+  opacity: 0.7;
+  top: 0;
+  z-index: 2;
+  display: none;
+}
+
+.active {
+  display: block;
+}
+
 @media screen and (min-width: 2560px) {
   .footer .text-ending {
-    font-size: 64px;
+    font-size: 48px;
   }
   .footer .contact {
-    font-size: 32px;
+    font-size: 24px;
   }
 }
 
@@ -498,11 +493,11 @@
 }
 
 .first-parallax {
-  background-image: url("../images/parallax-1.jpg");
+  background-image: url("../images/parallax-1.webp");
 }
 
 .second-parallax {
-  background-image: url("../images/parallax-2.jpg");
+  background-image: url("../images/parallax-2.webp");
 }
 
 .boats-section {
@@ -556,19 +551,19 @@
 }
 
 .boats-section .boats-container .boats .boats-position .boat-1 {
-  background-image: url("../images/boat-no-color-1.png");
+  background-image: url("../images/boat-no-color-1.webp");
 }
 
 .boats-section .boats-container .boats .boats-position .boat-2 {
-  background-image: url("../images/boat-no-color-2.png");
+  background-image: url("../images/boat-no-color-2.webp");
 }
 
 .boats-section .boats-container .boats .boats-position .boat-1:hover {
-  background-image: url("../images/boat-color-1.png");
+  background-image: url("../images/boat-color-1.webp");
 }
 
 .boats-section .boats-container .boats .boats-position .boat-2:hover {
-  background-image: url("../images/boat-color-2.png");
+  background-image: url("../images/boat-color-2.webp");
 }
 
 .boats-section .boats-container .boats .boats-information {
@@ -597,7 +592,7 @@
 .bottom-blocks .gallery-block {
   width: 100%;
   height: 35vh;
-  background-image: url("../images/gallery.png");
+  background-image: url("../images/gallery.webp");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -653,7 +648,7 @@
 .bottom-blocks .article-block {
   width: 33%;
   height: 35vh;
-  background-image: url("../images/article.jpeg");
+  background-image: url("../images/article.webp");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;

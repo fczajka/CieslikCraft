@@ -39,7 +39,7 @@
         .hamburger {
             position: relative;
             width: 44px;
-            left: 25px;
+            left: 26px;
             cursor: pointer;
             .line {
                 width: 36px;
@@ -51,46 +51,22 @@
     }
 }
 
-.overlay {
-    position: fixed;
-    width: 100vw;
-    height: 100vh;
-    background: black;
-    opacity: 0.7;
-    top: 0;
-    z-index: 2;
-    display: none;
-}
-
-.active {
-    display: block;
-}
-
 @media screen and (min-width: 2560px) {
     .header {
         min-height: 125px;
         .name {
             .name-picture {
-                width: 550px;
+                width: 450px;
             }
         }
         .navbar {
             .nav {
                 .nav-links {
-                    width: 64px;
-                    height: 64px;
+                    width: 48px;
+                    height: 48px;
                 }
             }
-        }
-        .sidebar-button {
-            .hamburger {
-                .line {
-                    width: 50px;
-                    height: 7px;
-                    margin: 6px;
-                }
-            }
-        }
+        } 
     }  
 }
 

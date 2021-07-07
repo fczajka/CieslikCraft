@@ -12,59 +12,59 @@ import movie from "../images/CieslikCraft.mp4"
 const IndexPage = () => {
   const slides = useStaticQuery(graphql`
     query {
-      slide1: file(relativePath: { eq: "slider/slide1.jpg" }) {
+      slide1: file(relativePath: { eq: "slider/slide1.webp" }) {
         childImageSharp {
           fluid(maxWidth: 3000, quality: 100) {
-            ...GatsbyImageSharpFluid_noBase64
+            ...GatsbyImageSharpFluid_withWebp_noBase64
           }
         }
       }
-      slide2: file(relativePath: { eq: "slider/slide2.jpg" }) {
+      slide2: file(relativePath: { eq: "slider/slide2.webp" }) {
         childImageSharp {
           fluid(maxWidth: 3000, quality: 100) {
-            ...GatsbyImageSharpFluid_noBase64
+            ...GatsbyImageSharpFluid_withWebp_noBase64
           }
         }
       }
-      slide3: file(relativePath: { eq: "slider/slide3.jpg" }) {
+      slide3: file(relativePath: { eq: "slider/slide3.webp" }) {
         childImageSharp {
           fluid(maxWidth: 3000, quality: 100) {
-            ...GatsbyImageSharpFluid_noBase64
+            ...GatsbyImageSharpFluid_withWebp_noBase64
           }
         }
       }
-      slide4: file(relativePath: { eq: "slider/slide4.jpeg" }) {
+      slide4: file(relativePath: { eq: "slider/slide4.webp" }) {
         childImageSharp {
           fluid(maxWidth: 3000, quality: 100) {
-            ...GatsbyImageSharpFluid_noBase64
+            ...GatsbyImageSharpFluid_withWebp_noBase64
           }
         }
       }
-      slide5: file(relativePath: { eq: "slider/slide5.jpg" }) {
+      slide5: file(relativePath: { eq: "slider/slide5.webp" }) {
         childImageSharp {
           fluid(maxWidth: 3000, quality: 100) {
-            ...GatsbyImageSharpFluid_noBase64
+            ...GatsbyImageSharpFluid_withWebp_noBase64
           }
         }
       }
-      slide6: file(relativePath: { eq: "slider/slide6.jpg" }) {
+      slide6: file(relativePath: { eq: "slider/slide6.webp" }) {
         childImageSharp {
           fluid(maxWidth: 3000, quality: 100) {
-            ...GatsbyImageSharpFluid_noBase64
+            ...GatsbyImageSharpFluid_withWebp_noBase64
           }
         }
       }
-      slide7: file(relativePath: { eq: "slider/slide7.jpg" }) {
+      slide7: file(relativePath: { eq: "slider/slide7.webp" }) {
         childImageSharp {
           fluid(maxWidth: 3000, quality: 100) {
-            ...GatsbyImageSharpFluid_noBase64
+            ...GatsbyImageSharpFluid_withWebp_noBase64
           }
         }
       }
-      slide8: file(relativePath: { eq: "slider/slide8.jpg" }) {
+      slide8: file(relativePath: { eq: "slider/slide8.webp" }) {
         childImageSharp {
           fluid(maxWidth: 3000, quality: 100) {
-            ...GatsbyImageSharpFluid_noBase64
+            ...GatsbyImageSharpFluid_withWebp_noBase64
           }
         }
       }
@@ -73,7 +73,7 @@ const IndexPage = () => {
   
   return(
     <Layout>
-      <SEO title="Home" />
+      <SEO />
       <div className="landing">
         <video className="video" autoPlay loop muted src={movie}></video>
       </div>

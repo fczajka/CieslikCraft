@@ -14,28 +14,28 @@ const Sidebar = () => {
           }
         }
       }
-      facebook: file(relativePath: { eq: "facebook-icon.png" }) {
+      facebook: file(relativePath: { eq: "facebook-icon.webp" }) {
         childImageSharp {
           fluid(maxWidth: 1000, quality: 100) {
             ...GatsbyImageSharpFluid
           }
         }
       }
-      youtube: file(relativePath: { eq: "youtube-icon.png" }) {
+      youtube: file(relativePath: { eq: "youtube-icon.webp" }) {
         childImageSharp {
           fluid(maxWidth: 1000, quality: 100) {
             ...GatsbyImageSharpFluid
           }
         }
       }
-      instagram: file(relativePath: { eq: "instagram-icon.png" }) {
+      instagram: file(relativePath: { eq: "instagram-icon.webp" }) {
         childImageSharp {
           fluid(maxWidth: 1000, quality: 100) {
             ...GatsbyImageSharpFluid
           }
         }
       }
-      mail: file(relativePath: { eq: "mail-icon.png" }) {
+      mail: file(relativePath: { eq: "mail-icon.webp" }) {
         childImageSharp {
           fluid(maxWidth: 1000, quality: 100) {
             ...GatsbyImageSharpFluid
@@ -57,7 +57,7 @@ const Sidebar = () => {
         dismiss.style.left = "-250px";
       }
 
-      overlay.classList.remove("active"); 
+      setTimeout(() => { overlay.classList.remove("active"); }, 400);
 
     }   
 
@@ -76,7 +76,7 @@ const Sidebar = () => {
       <h1 className="menu">MENU</h1>
       <ul className="sidebar-list-links">
         <li className="sidebar-links"><Link to="/">HOME</Link></li>
-        <li className="sidebar-links"><Link to="gallery">GALLERY</Link></li>
+        <li className="sidebar-links"><Link to="/gallery">GALLERY</Link></li>
         <li className="sidebar-links"><a href="https://blog.dluta.pl/zbuduj-samodzielnie-motorowke-z-cieslik-craft/" target="https://blog.dluta.pl/zbuduj-samodzielnie-motorowke-z-cieslik-craft/">NEWS</a></li>
       </ul>
       <ul className="sidebar-list-icons">
