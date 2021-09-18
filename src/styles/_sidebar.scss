@@ -25,26 +25,50 @@
         margin: 16px 25px 18px 25px;
         font-size: 32px;
     }
+    li:hover {
+        background-color: $grey;
+    }
     .sidebar-list-links {
         width: 100%;
         border: 1px solid $darker;
         border-left: 0;
         border-right: 0;
         padding: 6px 0;
+        height: 165px;
+        transition: all .4s;
         .sidebar-links {
             padding: 12px 20px;
             cursor: pointer;
             font-size: 18px;
-        }
-        .sidebar-links:hover {
-            background: white;
+            i {
+                text-align: right;
+            }
+            &:nth-child(3) {
+                display: flex;
+                justify-content: space-between;
+                i {
+                    margin-top: 6px;
+                }
+            }
+        }        
+        .media-links {
+            position: relative;
+            padding: 4px 0 4px 26px;
+            cursor: pointer;
+            font-size: 16px;
+            z-index: 1;
         }
     }
     .sidebar-list-icons {
+        position: relative;
         width: 100%;
-        height: 72px;
+        height: 144px;
         list-style-type: none;
+        z-index: 2;
         @include basicFlex(space-around);
+        align-items: flex-start;
+        padding-top: 16px;
+        background-color: $light;
         .sidebar-icon {
             width: 52px;
         }
@@ -63,15 +87,18 @@
             font-size: 40px;
         }
         .sidebar-list-links {
+            height: 194px;
             border: 2px solid $darker;
             border-left: 0;
             border-right: 0;
             .sidebar-links {
                 font-size: 24px;
             }
+            .media-links {
+                font-size: 22px;
+            }
         }
         .sidebar-list-icons {
-            height: 88px;
             .sidebar-icon {
                 width: 64px;
             }

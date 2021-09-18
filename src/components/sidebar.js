@@ -3,8 +3,35 @@ import { Link } from "gatsby"
 
 import { useStaticQuery, graphql } from "gatsby"
 import Img from "gatsby-image"
+import { width } from "dom-helpers"
 
 const Sidebar = () => {
+
+  function toggleLinks() {
+
+    const sidebarToResize = document.querySelector(".sidebar-list-links");
+
+    if(window.screen.width >= 2560) { 
+
+      if(sidebarToResize.clientHeight < 194) {
+        sidebarToResize.style.height = "320px";
+      } else {
+        sidebarToResize.style.height = "194px";
+      }    
+      console.log(sidebarToResize.clientHeight);
+
+    } else {
+
+      if(sidebarToResize.clientHeight < 165) {
+        sidebarToResize.style.height = "272px";
+      } else {
+        sidebarToResize.style.height = "165px";
+      }    
+
+    }
+
+  }
+
   const data = useStaticQuery(graphql`
     query {
       x: file(relativePath: { eq: "x.png" }) {
@@ -77,7 +104,10 @@ const Sidebar = () => {
       <ul className="sidebar-list-links">
         <li className="sidebar-links"><Link to="/">HOME</Link></li>
         <li className="sidebar-links"><Link to="/gallery">GALLERY</Link></li>
-        <li className="sidebar-links"><a href="https://blog.dluta.pl/zbuduj-samodzielnie-motorowke-z-cieslik-craft/" target="https://blog.dluta.pl/zbuduj-samodzielnie-motorowke-z-cieslik-craft/">NEWS</a></li>
+        <li className="sidebar-links" onClick={toggleLinks}>MEDIA<i class="fas fa-angle-down"></i></li>        
+        <li className="media-links"><a href="https://btj.com.pl/2021/06/21/samodzielna-budowa-drewnianej-motorowki-czesc-i-poradnik-konstruowania-kadluba-na-przykladzie-nowej-lodzi-dolce-vita-z-domowej-stoczni-cieslik-craft/?fbclid=IwAR35I-nN-4V1Ffo2n0MtWgs-w5BSCWguvuOI-m_q2j17B0lYjQovBZPB8s4" target="_blank">Biuletyn Techniki Jachtowej</a></li>
+        <li className="media-links"><a href="https://blog.dluta.pl/zbuduj-samodzielnie-motorowke-z-cieslik-craft/" target="_blank">Dłuta.pl</a></li>
+        <li className="media-links"><a href="https://tomaszmiler.com/aktywny-weekend-marynarka-casualowa-krate-chino-lodce.html?fbclid=IwAR13s7_VgpfIpbIP5i9laZGy1X0dVGi_DLrDqJVDepWbvOuBZKSp-S_JRpg" target="_blank">Miler Menswear</a></li>
       </ul>
       <ul className="sidebar-list-icons">
         <li className="sidebar-icon"><a href="https://www.instagram.com/cieslikcraft/" target="https://www.instagram.com/cieslikcraft/"><Img fluid={data.instagram.childImageSharp.fluid} alt="CieslikCraft - Instagram" /></a></li>
