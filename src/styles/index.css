@@ -975,6 +975,11 @@
   font-size: 18px;
 }
 
+.sidebar .sidebar-list-links .sidebar-links a {
+  display: inline-block;
+  width: 100%;
+}
+
 .sidebar .sidebar-list-links .sidebar-links i {
   text-align: right;
 }
@@ -1000,10 +1005,15 @@
   z-index: 1;
 }
 
+.sidebar .sidebar-list-links .media-links a {
+  display: inline-block;
+  width: 100%;
+}
+
 .sidebar .sidebar-list-icons {
   position: relative;
   width: 100%;
-  height: 144px;
+  height: 256px;
   list-style-type: none;
   z-index: 2;
   display: -webkit-box;
