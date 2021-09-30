@@ -14,16 +14,15 @@ const Sidebar = () => {
     if(window.screen.width >= 2560) { 
 
       if(sidebarToResize.clientHeight < 194) {
-        sidebarToResize.style.height = "438px";
+        sidebarToResize.style.height = "480px";
       } else {
         sidebarToResize.style.height = "194px";
       }    
       console.log(sidebarToResize.clientHeight);
 
     } else {
-
       if(sidebarToResize.clientHeight < 165) {
-        sidebarToResize.style.height = "358px";
+        sidebarToResize.style.height = "390px";
       } else {
         sidebarToResize.style.height = "165px";
       }    
@@ -106,6 +105,7 @@ const Sidebar = () => {
         <li className="sidebar-links"><Link to="/gallery">GALLERY</Link></li>
         <li className="sidebar-links" onClick={toggleLinks}>MEDIA<i className="fas fa-angle-down"></i></li>        
         <li className="media-links"><a href="https://btj.com.pl/2021/06/21/samodzielna-budowa-drewnianej-motorowki-czesc-i-poradnik-konstruowania-kadluba-na-przykladzie-nowej-lodzi-dolce-vita-z-domowej-stoczni-cieslik-craft/?fbclid=IwAR35I-nN-4V1Ffo2n0MtWgs-w5BSCWguvuOI-m_q2j17B0lYjQovBZPB8s4" target="_blank">Biuletyn Techniki Jachtowej</a></li>
+        <li className="media-links"><a href="https://www.youtube.com/watch?v=qj1gQIuYPa4" target="_blank">WatchThisCar</a></li>
         <li className="media-links"><a href="https://blog.dluta.pl/zbuduj-samodzielnie-motorowke-z-cieslik-craft/" target="_blank">Dłuta.pl</a></li>
         <li className="media-links"><a href="https://tomaszmiler.com/aktywny-weekend-marynarka-casualowa-krate-chino-lodce.html?fbclid=IwAR13s7_VgpfIpbIP5i9laZGy1X0dVGi_DLrDqJVDepWbvOuBZKSp-S_JRpg" target="_blank">Miler Menswear</a></li>
         <li className="media-links"><a href="https://www.motorowy.com/artykul/21-12-2018/disco-volante-cieslik-craft?fbclid=IwAR1SLLIGAkAXK-2OV_o-qG8Z519A6UTPNdR9dg390Sr1H3PCVIPpCMFxT60" target="_blank">Jachting Motorowy</a></li>
