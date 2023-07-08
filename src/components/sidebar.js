@@ -164,14 +164,6 @@ const Sidebar = () => {
             Jachtowe.com.pl
           </a>
         </li>
-        <li className="media-links">
-          <a
-            href="https://btj.com.pl/2022/04/06/mobilne-systemy-skanowania-kontrola-jakosci-i-inzynieria-odwrotna-w-jachtingu-i-szkutnictwie/"
-            target="_blank"
-          >
-            Reversesolutions
-          </a>
-        </li>
       </ul>
       <ul className="sidebar-list-icons">
         <li className="sidebar-icon">
